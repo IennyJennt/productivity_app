@@ -89,3 +89,4 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
 .add-row { margin-top: 10px; }
 .add-row input { flex: 1; min-width: 160px; }
 .danger-zone { margin-top: 20px; justify-content: flex-end; }
+.space-between h2 { margin: 0; }

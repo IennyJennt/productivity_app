@@ -58,6 +58,8 @@ export interface AppData {
   shortTermGoals: ShortTermGoal[]
   tasks: Task[]
   availability: Availability[]
+  /** Ids from goals.json already brought into the app, so deleted ones stay deleted. */
+  importedIds: string[]
 }
 
 export const emptyData = (): AppData => ({
@@ -66,4 +68,5 @@ export const emptyData = (): AppData => ({
   shortTermGoals: [],
   tasks: [],
   availability: [],
+  importedIds: [],
 })
