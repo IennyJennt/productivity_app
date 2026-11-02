@@ -1,1 +1,471 @@
-[]
+[
+  {
+    "id": "la-fund",
+    "title": "Save for my first 3 months in LA",
+    "description": "$7,620 total: rent $1,400 × 3 = $4,200, food $480 × 3 = $1,440, entertainment $500 × 3 = $1,500, phone and internet $160 × 3 = $480.",
+    "shortTermGoals": [
+      {
+        "id": "la-fund/set-up-the-la-fund",
+        "title": "Set up the LA fund",
+        "tasks": [
+          {
+            "id": "la-fund/set-up-the-la-fund/open-a-separate-high-yield-savings-account-just-",
+            "title": "Open a separate high-yield savings account just for the LA fund",
+            "estimateMinutes": 30
+          },
+          {
+            "id": "la-fund/set-up-the-la-fund/work-out-how-much-you-can-save-each-month-and-wh",
+            "title": "Work out how much you can save each month and when you plan to move",
+            "estimateMinutes": 45
+          },
+          {
+            "id": "la-fund/set-up-the-la-fund/set-up-an-automatic-transfer-on-payday",
+            "title": "Set up an automatic transfer on payday",
+            "estimateMinutes": 20
+          }
+        ]
+      },
+      {
+        "id": "la-fund/save-3-months-of-rent-4-200",
+        "title": "Save 3 months of rent ($4,200)",
+        "tasks": [
+          {
+            "id": "la-fund/save-3-months-of-rent-4-200/reach-1-400-month-1-rent",
+            "title": "Reach $1,400 (month 1 rent)",
+            "estimateMinutes": 15
+          },
+          {
+            "id": "la-fund/save-3-months-of-rent-4-200/reach-2-800-month-2-rent",
+            "title": "Reach $2,800 (month 2 rent)",
+            "estimateMinutes": 15
+          },
+          {
+            "id": "la-fund/save-3-months-of-rent-4-200/reach-4-200-month-3-rent",
+            "title": "Reach $4,200 (month 3 rent)",
+            "estimateMinutes": 15
+          }
+        ]
+      },
+      {
+        "id": "la-fund/save-3-months-of-living-costs-3-420",
+        "title": "Save 3 months of living costs ($3,420)",
+        "tasks": [
+          {
+            "id": "la-fund/save-3-months-of-living-costs-3-420/reach-5-640-total-1-440-for-food",
+            "title": "Reach $5,640 total (+ $1,440 for food)",
+            "estimateMinutes": 15
+          },
+          {
+            "id": "la-fund/save-3-months-of-living-costs-3-420/reach-7-140-total-1-500-for-entertainment",
+            "title": "Reach $7,140 total (+ $1,500 for entertainment)",
+            "estimateMinutes": 15
+          },
+          {
+            "id": "la-fund/save-3-months-of-living-costs-3-420/reach-7-620-total-480-for-phone-and-internet",
+            "title": "Reach $7,620 total (+ $480 for phone and internet)",
+            "estimateMinutes": 15
+          }
+        ]
+      }
+    ],
+    "dailyFocusMinutes": 30
+  },
+  {
+    "id": "bengal-cat",
+    "title": "Save $5,000 before getting a Bengal cat",
+    "description": "Have $5,000 saved before buying. Do the research tasks while you save.",
+    "shortTermGoals": [
+      {
+        "id": "bengal-cat/set-up-the-cat-fund",
+        "title": "Set up the cat fund",
+        "tasks": [
+          {
+            "id": "bengal-cat/set-up-the-cat-fund/make-a-separate-savings-bucket-for-the-cat-fund",
+            "title": "Make a separate savings bucket for the cat fund",
+            "estimateMinutes": 20
+          },
+          {
+            "id": "bengal-cat/set-up-the-cat-fund/decide-how-much-of-each-month-s-savings-goes-her",
+            "title": "Decide how much of each month's savings goes here vs. the LA fund",
+            "estimateMinutes": 20
+          }
+        ]
+      },
+      {
+        "id": "bengal-cat/research-before-buying",
+        "title": "Research before buying",
+        "tasks": [
+          {
+            "id": "bengal-cat/research-before-buying/check-your-la-apartment-s-pet-policy-and-pet-dep",
+            "title": "Check your LA apartment's pet policy and pet deposit",
+            "estimateMinutes": 30
+          },
+          {
+            "id": "bengal-cat/research-before-buying/find-reputable-registered-bengal-breeders-and-th",
+            "title": "Find reputable, registered Bengal breeders and their waitlists",
+            "estimateMinutes": 60
+          },
+          {
+            "id": "bengal-cat/research-before-buying/budget-monthly-cat-costs-food-litter-vet-insuran",
+            "title": "Budget monthly cat costs: food, litter, vet, insurance",
+            "estimateMinutes": 45
+          }
+        ]
+      },
+      {
+        "id": "bengal-cat/save-5-000",
+        "title": "Save $5,000",
+        "tasks": [
+          {
+            "id": "bengal-cat/save-5-000/reach-1-250",
+            "title": "Reach $1,250",
+            "estimateMinutes": 15
+          },
+          {
+            "id": "bengal-cat/save-5-000/reach-2-500",
+            "title": "Reach $2,500",
+            "estimateMinutes": 15
+          },
+          {
+            "id": "bengal-cat/save-5-000/reach-3-750",
+            "title": "Reach $3,750",
+            "estimateMinutes": 15
+          },
+          {
+            "id": "bengal-cat/save-5-000/reach-5-000",
+            "title": "Reach $5,000",
+            "estimateMinutes": 15
+          }
+        ]
+      }
+    ],
+    "dailyFocusMinutes": 30
+  },
+  {
+    "id": "career",
+    "title": "Get hired in robotics, mechatronics or physical AI",
+    "description": "Target roles: product engineer, robotics engineer, physical AI / mechatronics. Build a portfolio site and 4 projects that show mechanical design, electronics, controls, vision/AI and product thinking, then apply from March.",
+    "shortTermGoals": [
+      {
+        "id": "career/launch-portfolio-website-v1",
+        "title": "Launch portfolio website v1",
+        "tasks": [
+          {
+            "id": "career/launch-portfolio-website-v1/pick-a-site-builder-or-template-and-a-domain-nam",
+            "title": "Pick a site builder or template and a domain name",
+            "estimateMinutes": 60,
+            "dueDate": "2026-11-06"
+          },
+          {
+            "id": "career/launch-portfolio-website-v1/write-the-about-section-and-add-your-resume-pdf",
+            "title": "Write the About section and add your resume PDF",
+            "estimateMinutes": 120,
+            "dueDate": "2026-11-10"
+          },
+          {
+            "id": "career/launch-portfolio-website-v1/make-a-project-page-template-problem-design-buil",
+            "title": "Make a project page template: problem, design, build, results, next steps",
+            "estimateMinutes": 60,
+            "dueDate": "2026-11-14"
+          },
+          {
+            "id": "career/launch-portfolio-website-v1/add-the-origami-robot-and-bracelet-research-chec",
+            "title": "Add the origami robot and bracelet research (check what you can share publicly)",
+            "estimateMinutes": 180,
+            "dueDate": "2026-11-18"
+          },
+          {
+            "id": "career/launch-portfolio-website-v1/publish-the-site-and-link-it-from-linkedin-and-g",
+            "title": "Publish the site and link it from LinkedIn and GitHub",
+            "estimateMinutes": 60,
+            "dueDate": "2026-11-22"
+          }
+        ],
+        "targetDate": "2026-11-22"
+      },
+      {
+        "id": "career/build-a-servo-robot-arm",
+        "title": "Build a servo robot arm",
+        "tasks": [
+          {
+            "id": "career/build-a-servo-robot-arm/write-specs-degrees-of-freedom-reach-payload-ser",
+            "title": "Write specs: degrees of freedom, reach, payload, servos, controller",
+            "estimateMinutes": 120,
+            "dueDate": "2026-11-29"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/order-servos-controller-board-servo-driver-and-p",
+            "title": "Order servos, controller board, servo driver and power supply",
+            "estimateMinutes": 60,
+            "dueDate": "2026-12-04"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/model-the-arm-in-cad-as-an-assembly-with-joint-l",
+            "title": "Model the arm in CAD as an assembly with joint limits",
+            "estimateMinutes": 360,
+            "dueDate": "2026-12-09"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/3d-print-and-assemble-the-arm",
+            "title": "3D print and assemble the arm",
+            "estimateMinutes": 360,
+            "dueDate": "2026-12-15"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/wire-the-servos-power-and-controller",
+            "title": "Wire the servos, power and controller",
+            "estimateMinutes": 180,
+            "dueDate": "2026-12-21"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/write-joint-control-firmware-and-a-simple-contro",
+            "title": "Write joint control firmware and a simple control panel",
+            "estimateMinutes": 240,
+            "dueDate": "2026-12-26"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/implement-inverse-kinematics-to-reach-x-y-z-targ",
+            "title": "Implement inverse kinematics to reach x, y, z targets",
+            "estimateMinutes": 360,
+            "dueDate": "2026-12-31"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/program-a-pick-and-place-routine",
+            "title": "Program a pick-and-place routine",
+            "estimateMinutes": 180,
+            "dueDate": "2027-01-06"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/film-a-demo-video-and-photograph-the-build",
+            "title": "Film a demo video and photograph the build",
+            "estimateMinutes": 120,
+            "dueDate": "2027-01-12"
+          },
+          {
+            "id": "career/build-a-servo-robot-arm/write-the-project-page-design-choices-what-faile",
+            "title": "Write the project page: design choices, what failed, results",
+            "estimateMinutes": 180,
+            "dueDate": "2027-01-17"
+          }
+        ],
+        "targetDate": "2027-01-17"
+      },
+      {
+        "id": "career/mechanical-cad-mini-series",
+        "title": "Mechanical CAD mini-series",
+        "tasks": [
+          {
+            "id": "career/mechanical-cad-mini-series/design-a-print-in-place-compliant-gripper",
+            "title": "Design a print-in-place compliant gripper",
+            "estimateMinutes": 240,
+            "dueDate": "2026-12-17"
+          },
+          {
+            "id": "career/mechanical-cad-mini-series/design-a-planetary-gearbox-for-a-servo-or-steppe",
+            "title": "Design a planetary gearbox for a servo or stepper",
+            "estimateMinutes": 240,
+            "dueDate": "2027-01-03"
+          },
+          {
+            "id": "career/mechanical-cad-mini-series/design-a-snap-fit-electronics-enclosure-with-not",
+            "title": "Design a snap-fit electronics enclosure with notes on manufacturability",
+            "estimateMinutes": 180,
+            "dueDate": "2027-01-21"
+          },
+          {
+            "id": "career/mechanical-cad-mini-series/make-renders-and-engineering-drawings-and-add-th",
+            "title": "Make renders and engineering drawings and add the series to your site",
+            "estimateMinutes": 180,
+            "dueDate": "2027-02-07"
+          }
+        ],
+        "targetDate": "2027-02-07"
+      },
+      {
+        "id": "career/give-the-arm-vision-physical-ai",
+        "title": "Give the arm vision (physical AI)",
+        "tasks": [
+          {
+            "id": "career/give-the-arm-vision-physical-ai/mount-a-camera-and-calibrate-it-to-the-arm-s-coo",
+            "title": "Mount a camera and calibrate it to the arm's coordinates",
+            "estimateMinutes": 240,
+            "dueDate": "2027-01-29"
+          },
+          {
+            "id": "career/give-the-arm-vision-physical-ai/detect-objects-with-opencv-then-try-a-small-dete",
+            "title": "Detect objects with OpenCV, then try a small detection model",
+            "estimateMinutes": 360,
+            "dueDate": "2027-02-09"
+          },
+          {
+            "id": "career/give-the-arm-vision-physical-ai/pick-up-an-object-wherever-the-camera-sees-it",
+            "title": "Pick up an object wherever the camera sees it",
+            "estimateMinutes": 360,
+            "dueDate": "2027-02-20"
+          },
+          {
+            "id": "career/give-the-arm-vision-physical-ai/stretch-record-demonstrations-and-train-a-small-",
+            "title": "Stretch: record demonstrations and train a small imitation-learning policy",
+            "estimateMinutes": 480,
+            "dueDate": "2027-03-03"
+          },
+          {
+            "id": "career/give-the-arm-vision-physical-ai/film-the-demo-and-write-the-project-page",
+            "title": "Film the demo and write the project page",
+            "estimateMinutes": 180,
+            "dueDate": "2027-03-14"
+          }
+        ],
+        "targetDate": "2027-03-14"
+      },
+      {
+        "id": "career/simulate-the-arm-in-ros-2",
+        "title": "Simulate the arm in ROS 2",
+        "tasks": [
+          {
+            "id": "career/simulate-the-arm-in-ros-2/work-through-the-ros-2-beginner-tutorials",
+            "title": "Work through the ROS 2 beginner tutorials",
+            "estimateMinutes": 360,
+            "dueDate": "2027-02-22"
+          },
+          {
+            "id": "career/simulate-the-arm-in-ros-2/write-a-urdf-model-of-your-arm-and-view-it-in-rv",
+            "title": "Write a URDF model of your arm and view it in RViz",
+            "estimateMinutes": 240,
+            "dueDate": "2027-03-08"
+          },
+          {
+            "id": "career/simulate-the-arm-in-ros-2/plan-and-run-motions-in-simulation-with-moveit",
+            "title": "Plan and run motions in simulation with MoveIt",
+            "estimateMinutes": 360,
+            "dueDate": "2027-03-21"
+          },
+          {
+            "id": "career/simulate-the-arm-in-ros-2/add-a-short-write-up-to-the-arm-s-project-page",
+            "title": "Add a short write-up to the arm's project page",
+            "estimateMinutes": 60,
+            "dueDate": "2027-04-04"
+          }
+        ],
+        "targetDate": "2027-04-04"
+      },
+      {
+        "id": "career/design-a-small-product-end-to-end",
+        "title": "Design a small product end to end",
+        "tasks": [
+          {
+            "id": "career/design-a-small-product-end-to-end/pick-a-real-user-problem-and-write-a-one-page-pr",
+            "title": "Pick a real user problem and write a one-page product brief",
+            "estimateMinutes": 120,
+            "dueDate": "2027-03-21"
+          },
+          {
+            "id": "career/design-a-small-product-end-to-end/prototype-the-electronics-on-a-breadboard",
+            "title": "Prototype the electronics on a breadboard",
+            "estimateMinutes": 240,
+            "dueDate": "2027-03-27"
+          },
+          {
+            "id": "career/design-a-small-product-end-to-end/design-a-custom-pcb-in-kicad-and-order-it",
+            "title": "Design a custom PCB in KiCad and order it",
+            "estimateMinutes": 360,
+            "dueDate": "2027-04-02"
+          },
+          {
+            "id": "career/design-a-small-product-end-to-end/design-a-manufacturable-enclosure-draft-angles-t",
+            "title": "Design a manufacturable enclosure (draft angles, tolerances, snap fits)",
+            "estimateMinutes": 300,
+            "dueDate": "2027-04-07"
+          },
+          {
+            "id": "career/design-a-small-product-end-to-end/build-2-or-3-iterations-and-test-them-with-a-few",
+            "title": "Build 2 or 3 iterations and test them with a few people",
+            "estimateMinutes": 360,
+            "dueDate": "2027-04-13"
+          },
+          {
+            "id": "career/design-a-small-product-end-to-end/write-the-bill-of-materials-with-costs-and-a-sho",
+            "title": "Write the bill of materials with costs and a short manufacturing write-up",
+            "estimateMinutes": 120,
+            "dueDate": "2027-04-19"
+          },
+          {
+            "id": "career/design-a-small-product-end-to-end/write-the-project-page-with-process-photos",
+            "title": "Write the project page with process photos",
+            "estimateMinutes": 180,
+            "dueDate": "2027-04-25"
+          }
+        ],
+        "targetDate": "2027-04-25"
+      },
+      {
+        "id": "career/job-search",
+        "title": "Job search",
+        "tasks": [
+          {
+            "id": "career/job-search/tailor-your-resume-for-product-robotics-and-mech",
+            "title": "Tailor your resume for product, robotics and mechatronics roles",
+            "estimateMinutes": 120,
+            "dueDate": "2027-03-10"
+          },
+          {
+            "id": "career/job-search/list-30-target-companies-robotics-hardware-start",
+            "title": "List 30 target companies: robotics, hardware startups, physical AI labs",
+            "estimateMinutes": 120,
+            "dueDate": "2027-03-19"
+          },
+          {
+            "id": "career/job-search/update-linkedin-and-pin-your-projects-on-github",
+            "title": "Update LinkedIn and pin your projects on GitHub",
+            "estimateMinutes": 60,
+            "dueDate": "2027-03-28"
+          },
+          {
+            "id": "career/job-search/message-5-engineers-at-target-companies-for-shor",
+            "title": "Message 5 engineers at target companies for short chats",
+            "estimateMinutes": 60,
+            "dueDate": "2027-04-06"
+          },
+          {
+            "id": "career/job-search/apply-to-your-first-10-roles",
+            "title": "Apply to your first 10 roles",
+            "estimateMinutes": 180,
+            "dueDate": "2027-04-16"
+          },
+          {
+            "id": "career/job-search/practice-a-5-minute-walkthrough-of-the-robot-arm",
+            "title": "Practice a 5-minute walkthrough of the robot arm project",
+            "estimateMinutes": 60,
+            "dueDate": "2027-04-25"
+          },
+          {
+            "id": "career/job-search/message-5-more-engineers-at-target-companies",
+            "title": "Message 5 more engineers at target companies",
+            "estimateMinutes": 60,
+            "dueDate": "2027-05-04"
+          },
+          {
+            "id": "career/job-search/review-mechanics-controls-and-coding-basics-for-",
+            "title": "Review mechanics, controls and coding basics for interviews",
+            "estimateMinutes": 240,
+            "dueDate": "2027-05-13"
+          },
+          {
+            "id": "career/job-search/apply-to-10-more-roles",
+            "title": "Apply to 10 more roles",
+            "estimateMinutes": 180,
+            "dueDate": "2027-05-22"
+          },
+          {
+            "id": "career/job-search/follow-up-on-applications-and-conversations",
+            "title": "Follow up on applications and conversations",
+            "estimateMinutes": 60,
+            "dueDate": "2027-05-31"
+          }
+        ],
+        "targetDate": "2027-05-31"
+      }
+    ],
+    "targetDate": "2027-05-31"
+  }
+]

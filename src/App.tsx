@@ -2,18 +2,22 @@ import { useRef, useState } from 'react'
 import { useAppData } from './data/useAppData'
 import { exportData, importData } from './data/storage'
 import { GoalsView } from './components/GoalsView'
+import { TodayView } from './components/TodayView'
 
-type Tab = 'goals' | 'schedule' | 'settings'
+type Tab = 'today' | 'goals' | 'schedule' | 'settings'
 
 const tabs: { id: Tab; label: string }[] = [
+  { id: 'today', label: 'Today' },
   { id: 'goals', label: 'Goals' },
   { id: 'schedule', label: 'Schedule' },
   { id: 'settings', label: 'Settings' },
 ]
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>('goals')
+  const [tab, setTab] = useState<Tab>('today')
   const [data, setData] = useAppData()
+  // Bumped to open a specific goal on the Goals tab from Today.
+  const [openGoalId, setOpenGoalId] = useState<string | null>(null)
   const fileInput = useRef<HTMLInputElement>(null)
 
   return (
@@ -25,7 +29,10 @@ export default function App() {
             <button
               key={t.id}
               className={t.id === tab ? 'tab active' : 'tab'}
-              onClick={() => setTab(t.id)}
+              onClick={() => {
+                setOpenGoalId(null)
+                setTab(t.id)
+              }}
             >
               {t.label}
             </button>
@@ -34,7 +41,17 @@ export default function App() {
       </header>
 
       <main>
-        {tab === 'goals' && <GoalsView data={data} setData={setData} />}
+        {tab === 'today' && (
+          <TodayView
+            data={data}
+            setData={setData}
+            openGoal={(id) => {
+              setOpenGoalId(id)
+              setTab('goals')
+            }}
+          />
+        )}
+        {tab === 'goals' && <GoalsView key={openGoalId ?? 'list'} data={data} setData={setData} initialGoalId={openGoalId} />}
 
         {tab === 'schedule' && (
           <section>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { formatDate } from '../breakdown/dates'
 import * as A from '../data/actions'
+import { DEFAULT_FOCUS_MINUTES } from '../data/focus'
 import type { AppData, Id } from '../data/types'
 import { ProgressBar } from './ProgressBar'
 
@@ -31,6 +32,32 @@ export function GoalDetail({ data, goalId, setData, onBack }: Props) {
         {goal.description} {goal.targetDate && <>Finish by {formatDate(goal.targetDate)}.</>}
       </p>
       <ProgressBar value={A.progress(allTasks)} />
+
+      <div className="row goal-controls">
+        {goal.pausedAt ? (
+          <>
+            <span className="badge">Paused since {formatDate(goal.pausedAt.slice(0, 10))}</span>
+            <button className="primary" onClick={() => setData((d) => A.resumeGoal(d, goal.id))}>
+              Resume
+            </button>
+          </>
+        ) : (
+          <button onClick={() => setData((d) => A.pauseGoal(d, goal.id))}>Pause</button>
+        )}
+        <label className="minutes" title="How much time Today should plan for this goal each day">
+          Daily focus
+          <input
+            type="number"
+            min="15"
+            step="15"
+            value={goal.dailyFocusMinutes ?? DEFAULT_FOCUS_MINUTES}
+            onChange={(e) =>
+              setData((d) => A.updateLongTermGoal(d, goal.id, { dailyFocusMinutes: Math.max(15, Number(e.target.value) || DEFAULT_FOCUS_MINUTES) }))
+            }
+          />
+          min
+        </label>
+      </div>
 
       {stgs.map((s) => {
         const tasks = data.tasks.filter((t) => t.shortTermGoalId === s.id)
@@ -111,7 +138,7 @@ function ShortTermGoalCard({
             <input
               type="checkbox"
               checked={t.status === 'done'}
-              onChange={(e) => setData((d) => A.updateTask(d, t.id, { status: e.target.checked ? 'done' : 'not_started' }))}
+              onChange={(e) => setData((d) => A.setTaskDone(d, t.id, e.target.checked))}
             />
             <input
               className="task-title"

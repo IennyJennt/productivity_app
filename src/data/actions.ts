@@ -1,4 +1,5 @@
 // Pure updates to AppData. Each returns a new object so React re-renders.
+import { addDays, parseISODate, toISODate } from '../breakdown/dates'
 
 import type { Plan } from '../breakdown/templates'
 import { newId } from './storage'
@@ -98,4 +99,31 @@ export function statusFromTasks(tasks: Task[]): Status {
   if (tasks.every((t) => t.status === 'done')) return 'done'
   if (tasks.some((t) => t.status !== 'not_started')) return 'in_progress'
   return 'not_started'
+}
+
+export function setTaskDone(data: AppData, id: Id, done: boolean): AppData {
+  return updateTask(data, id, done ? { status: 'done', completedAt: new Date().toISOString() } : { status: 'not_started', completedAt: undefined })
+}
+
+export function pauseGoal(data: AppData, id: Id, now = new Date()): AppData {
+  return updateLongTermGoal(data, id, { pausedAt: now.toISOString() })
+}
+
+/**
+ * Resumes a paused goal. Due dates of unfinished tasks (and the goal's target
+ * dates) move later by the number of days it was paused, so the plan picks up
+ * where it left off instead of showing everything as overdue.
+ */
+export function resumeGoal(data: AppData, id: Id, now = new Date()): AppData {
+  const goal = data.longTermGoals.find((g) => g.id === id)
+  if (!goal?.pausedAt) return data
+  const days = Math.max(0, Math.floor((now.getTime() - new Date(goal.pausedAt).getTime()) / 86_400_000))
+  const shift = (d?: string) => (d && days > 0 ? toISODate(addDays(parseISODate(d), days)) : d)
+  const stgIds = new Set(data.shortTermGoals.filter((s) => s.longTermGoalId === id).map((s) => s.id))
+  return {
+    ...data,
+    longTermGoals: data.longTermGoals.map((g) => (g.id === id ? { ...g, pausedAt: undefined, targetDate: shift(g.targetDate) } : g)),
+    shortTermGoals: data.shortTermGoals.map((s) => (stgIds.has(s.id) ? { ...s, targetDate: shift(s.targetDate) } : s)),
+    tasks: data.tasks.map((t) => (stgIds.has(t.shortTermGoalId) && t.status !== 'done' ? { ...t, dueDate: shift(t.dueDate) } : t)),
+  }
 }

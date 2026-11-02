@@ -9,10 +9,13 @@ import { ProgressBar } from './ProgressBar'
 interface Props {
   data: AppData
   setData: (fn: (d: AppData) => AppData) => void
+  initialGoalId?: Id | null
 }
 
-export function GoalsView({ data, setData }: Props) {
-  const [view, setView] = useState<{ kind: 'list' } | { kind: 'new' } | { kind: 'goal'; id: Id }>({ kind: 'list' })
+type View = { kind: 'list' } | { kind: 'new' } | { kind: 'goal'; id: Id }
+
+export function GoalsView({ data, setData, initialGoalId }: Props) {
+  const [view, setView] = useState<View>(initialGoalId ? { kind: 'goal', id: initialGoalId } : { kind: 'list' })
 
   if (view.kind === 'new') {
     return (
@@ -41,7 +44,7 @@ export function GoalsView({ data, setData }: Props) {
       </div>
 
       {data.longTermGoals.length === 0 && (
-        <p className="muted">No goals yet. Add one and the app will break it into short-term goals and tasks.</p>
+        <p className="muted">No goals yet. Add one and break it into short-term goals and tasks.</p>
       )}
 
       <ul className="goal-list">
@@ -55,7 +58,9 @@ export function GoalsView({ data, setData }: Props) {
             <li key={g.id}>
               <button className="goal-card" onClick={() => setView({ kind: 'goal', id: g.id })}>
                 <div className="row space-between">
-                  <strong>{g.title}</strong>
+                  <strong>
+                    {g.title} {g.pausedAt && <span className="badge">Paused</span>}
+                  </strong>
                   {g.targetDate && <span className="muted">by {formatDate(g.targetDate)}</span>}
                 </div>
                 <ProgressBar value={A.progress(tasks)} />

@@ -33,3 +33,12 @@ describe('mergeFileGoals', () => {
     expect(data.longTermGoals).toHaveLength(1)
   })
 })
+
+describe('goals.json', () => {
+  it('has unique ids and imports cleanly', async () => {
+    const { fileGoals } = await import('./fileGoals')
+    const data = mergeFileGoals(emptyData(), fileGoals)
+    expect(new Set(data.importedIds).size).toBe(data.importedIds.length)
+    expect(data.tasks.every((t) => t.estimateMinutes > 0)).toBe(true)
+  })
+})

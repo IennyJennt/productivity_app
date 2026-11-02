@@ -90,3 +90,11 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
 .add-row input { flex: 1; min-width: 160px; }
 .danger-zone { margin-top: 20px; justify-content: flex-end; }
 .space-between h2 { margin: 0; }
+.badge { display: inline-block; font-size: 0.75rem; font-weight: 500; padding: 1px 8px; border-radius: 999px; background: var(--bg); border: 1px solid var(--border); color: var(--muted); vertical-align: middle; }
+.goal-controls { align-items: center; margin: 4px 0 8px; }
+button.link { border: none; background: none; padding: 0; color: var(--text); }
+button.link:hover { color: var(--accent); }
+.tasks.today li { flex-wrap: nowrap; }
+.tasks.today .task-title { min-width: 0; }
+.paused-heading { margin-top: 20px; }
+.paused-row { padding: 8px 0; border-top: 1px solid var(--border); }

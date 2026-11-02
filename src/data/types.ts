@@ -15,6 +15,10 @@ export interface LongTermGoal {
   /** ISO date (YYYY-MM-DD) the goal should be reached by. */
   targetDate?: string
   status: Status
+  /** Set while the goal is paused; its tasks are left out of Today. */
+  pausedAt?: string
+  /** Focus time per day for this goal on the Today list (default 120). */
+  dailyFocusMinutes?: number
   createdAt: string
 }
 
@@ -39,6 +43,8 @@ export interface Task {
   /** Filled in by the scheduler once the task has a time slot. */
   scheduledStart?: string
   scheduledEnd?: string
+  /** When the task was ticked off. */
+  completedAt?: string
   createdAt: string
 }
 

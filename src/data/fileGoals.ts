@@ -28,6 +28,10 @@ export interface FileGoal {
   title: string
   description?: string
   targetDate?: string
+  /** Daily focus time for Today, in minutes (default 120). */
+  dailyFocusMinutes?: number
+  /** Start the goal paused. */
+  paused?: boolean
   shortTermGoals: FileShortTermGoal[]
 }
 
@@ -43,7 +47,16 @@ export function mergeFileGoals(data: AppData, goals: FileGoal[]): AppData {
   for (const g of goals) {
     if (!seen.has(g.id)) {
       seen.add(g.id)
-      ltgs.push({ id: g.id, title: g.title, description: g.description, targetDate: g.targetDate, status: 'not_started', createdAt: now })
+      ltgs.push({
+        id: g.id,
+        title: g.title,
+        description: g.description,
+        targetDate: g.targetDate,
+        dailyFocusMinutes: g.dailyFocusMinutes,
+        pausedAt: g.paused ? now : undefined,
+        status: 'not_started',
+        createdAt: now,
+      })
     }
     for (const s of g.shortTermGoals) {
       if (!seen.has(s.id)) {
