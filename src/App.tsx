@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { useAppData } from './data/useAppData'
 import { exportData, importData } from './data/storage'
+import { GoalsView } from './components/GoalsView'
 
 type Tab = 'goals' | 'schedule' | 'settings'
 
@@ -33,16 +34,7 @@ export default function App() {
       </header>
 
       <main>
-        {tab === 'goals' && (
-          <section>
-            <h2>Goals</h2>
-            <p className="muted">
-              {data.longTermGoals.length} long-term goals, {data.shortTermGoals.length} short-term
-              goals, {data.tasks.length} tasks.
-            </p>
-            <p className="muted">Adding and breaking down goals comes in step 2.</p>
-          </section>
-        )}
+        {tab === 'goals' && <GoalsView data={data} setData={setData} />}
 
         {tab === 'schedule' && (
           <section>
